@@ -879,6 +879,7 @@
 			.read-more-content .text {
 				display: inline;
 			}
+
 			.read-more-content .read-more-btn {
 				display: none;
 				cursor: pointer;
@@ -1519,25 +1520,7 @@
 				padding: 8px 0;
 				display: inline-block;
 			}
-			.header-section::before {
-				content: '';
-				position: absolute;
-				top: -60px;
-				left: -60px;
-				width: 260px;
-				height: 260px;
-				background: radial-gradient(
-					circle,
-					#00eaff 0%,
-					#00529d 80%,
-					transparent 100%
-				);
-				opacity: 0.13;
-				filter: blur(8px);
-				z-index: 0;
-				pointer-events: none;
-				border-radius: 50%;
-			}
+
 			.header-section .container,
 			.header-section .content {
 				position: relative;
@@ -1607,7 +1590,7 @@
 				bottom: 0;
 				left: 0;
 				right: 0;
-				height: 300px;
+				height: 100vh;
 				background-color: var(--color, #6d18a5);
 				box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
 				transition: 500ms;
@@ -2385,6 +2368,113 @@
 					min-width: 350px;
 				}
 			}
+
+			/* Lev's styles */
+			body {
+				background-color: rgb(68, 9, 120);
+			}
+			h2,
+			.h1-title span,
+			.h4-title,
+			li::marker,
+			li.text::marker,
+			.welcome strong,
+			p span,
+			h3,
+			ul li,
+			h4 {
+				color: #a72dfe;
+			}
+			p {
+				color: #fff;
+			}
+
+			.header-section {
+				background-color: #5c01fe;
+			}
+			.header-section .container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				z-index: 100;
+			}
+			.h1-title span {
+				font-weight: 700;
+				font-style: italic;
+			}
+			.text-wrapper {
+				display: flex;
+				gap: 15px;
+			}
+			.text.left {
+				border-right: 1px solid #a72dfe;
+				padding-right: 15px;
+			}
+
+			.h4-title {
+				font-size: 48px;
+			}
+			p,
+			li,
+			li.text {
+				color: #fff;
+				font-size: 24px;
+				line-height: 32px;
+			}
+			.slogan {
+				color: #fff;
+				padding: 10px;
+				border: 1px solid #a72dfe;
+				text-align: center;
+				margin: 40px 0;
+			}
+
+			.welcome strong {
+				font-size: 48px;
+			}
+
+			.border-top {
+				padding-top: 10px;
+				border-top: 1px solid #a72dfe;
+			}
+
+			table {
+				background-color: #a72dfe;
+			}
+			td p,
+			td a,
+			td p a {
+				color: #2b2b2b;
+				font-size: 20px;
+				text-decoration: none;
+			}
+
+			.top-5 {
+				text-align: center;
+				color: #fff;
+				padding: 10px;
+				border: 1px solid #a72dfe;
+				margin-top: 60px;
+			}
+
+			h3 {
+				letter-spacing: 4px;
+				text-transform: uppercase;
+				font-size: 36px;
+				line-height: 120%;
+			}
+			ul strong {
+				color: #fff;
+				font-size: 24px;
+			}
+			ul li {
+				font-size: 20px;
+			}
+
+			h4 {
+				text-align: center;
+				font-size: 22px;
+			}
 		</style>
 	</head>
 	<body id="website">
@@ -2499,21 +2589,29 @@
 			<section class="header-section">
 				<div class="container">
 					<div class="content read-more-content">
-						<h1 class="h1-title">Populārākie online kazino Latvijā</h1>
+						<h1 class="h1-title">
+							Populārākie online <span>kazino</span> Latvijā
+						</h1>
 						<div class="text-wrapper">
-							<p class="text">
+							<p class="text left">
 								Aizvietot kārtīgu zolītes vakaru ar čomiem piektdienas vakarā
 								nevar nekas - nu pilnīgi nekas. Bet kā ir ar spēļu automātiem,
 								ruleti, pokeru un citām kazino spēlēm? Vai arī spēļu zāles un
-								kazino namus nevar aizvietot? Pēc mūsu uzskatiem - var! Kā? Ar
-								kazino internetā! Online kazino vietnes piedāvā neiedomājami
-								plašu izklaides klāstu, kā arī pievilcīgus bonusus patīkamākai
-								spēlēšanai. Autentiskai kazino pieredzei ir pieejamas live
-								kazino spēles, kur iespējams 'gamblot' kopā ar īstiem dīleriem!
-								Sīkāk par tiešsaistes kazino pastāstīsim šajā rakstā. Aiziet!
+								kazino namus nevar aizvietot? Pēc mūsu uzskatiem - var!
+							</p>
+							<p class="text">
+								Kā? Ar kazino internetā! Online kazino vietnes piedāvā
+								neiedomājami plašu izklaides klāstu, kā arī pievilcīgus bonusus
+								patīkamākai spēlēšanai. Autentiskai kazino pieredzei ir
+								pieejamas live kazino spēles, kur iespējams 'gamblot' kopā ar
+								īstiem dīleriem! Sīkāk par tiešsaistes kazino pastāstīsim šajā
+								rakstā. Aiziet!
 							</p>
 							<span class="read-more-btn">Lasīt Vairāk</span>
 						</div>
+					</div>
+					<div class="header-img">
+						<img src="images/header-img.png" alt="header-img / play cards" />
 					</div>
 				</div>
 				<div class="header-waves"></div>
@@ -3338,8 +3436,12 @@
 						</div>
 						<div class="bg"></div>
 					</div>
-					<h2>Onlinekazino.gg - Tavs palīgs interneta azartspēļu pasaulē!</h2>
-					<p><strong>Laipni lūgts vietnē "Onlinekazino.gg"!</strong></p>
+					<h2 class="slogan">
+						Onlinekazino.gg - Tavs palīgs interneta azartspēļu pasaulē!
+					</h2>
+					<p class="welcome">
+						<strong>Laipni lūgts vietnē "Onlinekazino.gg"!</strong>
+					</p>
 					<p>
 						Mūsdienās interaktīvo azartspēļu industrija ir attīstījusies līdz
 						vēl nebiju&scaron;iem apmēriem. Virtuālajā vidē ir tūksto&scaron;iem
@@ -3355,16 +3457,19 @@
 						misija ir palīdzēt visiem spēlētājiem neapmaldīties interneta kazino
 						pasaulē, kā arī informēt par labākajiem bonusiem!
 					</p>
-					<p>
+					<p class="border-top">
 						Pavisam īsos vilcienos, &scaron;ajā azartspēlmaņiem draudzīgajā
 						platformā atradīsi:
 					</p>
-					<p>1) Latvijas & ārzemju online kazino apskatus;</p>
-					<p>2) Labākos sporta likmju totalizatorus;</p>
-					<p>3) Izdevīgākos kazino bonusus un īpa&scaron;os piedāvājumus;</p>
-					<p>4) Kazino spēļu apskatus, noteikumus un padomus;</p>
-					<p>5) Azartspēļu industrijas jaunumus un inovācijas;</p>
-					<p>6) Bezmaksas kazino spēles.</p>
+					<p><span>1)</span> Latvijas & ārzemju online kazino apskatus;</p>
+					<p><span>2)</span> Labākos sporta likmju totalizatorus;</p>
+					<p>
+						<span>3)</span> Izdevīgākos kazino bonusus un īpa&scaron;os
+						piedāvājumus;
+					</p>
+					<p><span>4)</span> Kazino spēļu apskatus, noteikumus un padomus;</p>
+					<p><span>5)</span> Azartspēļu industrijas jaunumus un inovācijas;</p>
+					<p><span>6)</span> Bezmaksas kazino spēles.</p>
 					<h2>Licencētie online kazino Latvijā</h2>
 					<p>
 						Par online kazino dro&scaron;ību Latvijā atbild Izložu un Azartspēļu
@@ -3513,7 +3618,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<h2>Latvijas kazino TOP5</h2>
+					<h2 class="top-5">Latvijas kazino TOP5</h2>
 					<img
 						src="https://assets.onlinekazino.gg/images/in/2023/03/20230316_0904_lmcwf8jmtz.webp"
 						width="1200"
@@ -4051,16 +4156,16 @@
 						alt="kazino spēles"
 					/>
 					<p><strong>Latvijā populārākie kazino spēļu izstrādātāji:</strong></p>
-					<p>1) Pragmatic Play;</p>
-					<p>2) Novomatic (Greentube);</p>
-					<p>3) Evolution Gaming;</p>
-					<p>4) Play'n Go;</p>
-					<p>5) NetEnt;</p>
-					<p>6) Microgaming;</p>
-					<p>7) NetEnt;</p>
-					<p>8) Relax Gaming;</p>
-					<p>9) Amusnet (EGT Interactive);</p>
-					<p>10) Spinomenal.</p>
+					<p><span>1)</span> Pragmatic Play;</p>
+					<p><span>2)</span> Novomatic (Greentube);</p>
+					<p><span>3)</span> Evolution Gaming;</p>
+					<p><span>4)</span> Play'n Go;</p>
+					<p><span>5)</span> NetEnt;</p>
+					<p><span>6)</span> Microgaming;</p>
+					<p><span>7)</span> NetEnt;</p>
+					<p><span>8)</span> Relax Gaming;</p>
+					<p><span>9)</span> Amusnet (EGT Interactive);</p>
+					<p><span>10)</span> Spinomenal.</p>
 					<h3>Spēļu automāti</h3>
 					<p>
 						Spēļu automāti ir spēlētāju vidū pati iemīļotākā izklaide. Slotu
